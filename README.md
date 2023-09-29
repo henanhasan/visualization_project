@@ -1,62 +1,39 @@
-# visualization_project
-# PISA 2012 Data Wrangling
+# PISA 2012 Data Exploration & Insights
+## by Hanan Hasan
 
-This repository contains instructions and code for performing data wrangling on the 'pisa2012' CSV file. The goal of this process is to clean and format the data, remove rows with missing values, and correct any writing and typing errors. Below are the steps to follow for data wrangling:
 
-## Data Description
+## Overview
+>This repository contains an in-depth analysis of the PISA 2012 dataset, focusing on student behaviors, parental influence, and academic performance. The data exploration (Part I notebook) dives into several facets of the dataset, shedding light on the dynamics between various factors and their potential influence on a student's academic success. The explanatory slide deck (Part II outcome) encapsulates key insights derived from the analysis, providing a cohesive narrative on the overarching findings.
 
-The 'pisa2012' CSV file contains data related to the Programme for International Student Assessment (PISA) 2012. The dataset includes various attributes related to student performance, demographics, and educational factors.
 
-## Data Wrangling Steps
+## Dataset Overview
+>The data consisted of countries and scores of approximately 700,000 students. The attributes included the parental and school environmental factors, as well as additional measurements such as timespendture outside school,and Truancies of skipping classes. I have taken a random sample of 10000 entries from it as it was a large file Aand difficult to work on in f=different environments. as well as 10 data points were removed from the analysis due to inconsistencies or missing information.
 
-### Step 1: Data Loading
+## Summary of Main Findings
+> -Study Time vs. Performance: More hours spent studying doesn't always translate to better academic performance. This was notably evident in students from the US and Indonesia.
+-Parental Influence: In non-OECD countries, students with parents holding Level 1 or lower educational credentials surprisingly outperformed their peers.
+-Digital Influence: Patterns of computer usage varied across countries, with students in Kazakhstan, Russia, and Bulgaria predominantly spending more time on computers.
+-Gender Dynamics: Male students had a slight edge in performance, even though females dedicated more time to homework.
+-Teacher-Student Relationship: The bond between students and teachers stood out as a significant predictor of academic performance.
+-Country-wise Analysis: Countries like the USA and Indonesia exhibited higher scores, while others, despite having strong student-teacher relationships, lagged.
+-Holistic Factors: Academic success is a culmination of multiple factors – parental education, student-teacher relationships, truancy rates, and personal diligence.
+-General Observations: The majority of students had a positive relationship with their teachers and displayed commitment to their academic responsibilities.
 
-1.1. Ensure you have Python and the pandas library installed.
+## Key Insights for Explanatory for Presentation
+>-The counterintuitive trend between study time and academic performance, especially in countries like the US and Indonesia.
+-The surprising impact of parental education levels on student performance in non-OECD countries.
+-Diverse patterns of computer usage and their potential correlation (or lack thereof) with academic scores.
+-The pivotal role of student-teacher relationships in shaping academic outcomes.
+-A comparative analysis of academic performance across key countries, revealing disparities and potential areas of improvement.
 
-1.2. Load the 'pisa2012' CSV file into a pandas DataFrame using the following code:
+## Steps Taken During Data Exploration (Part I Notebook)
+>-Data Loading & Preliminary Assessment: Loaded the PISA 2012 dataset and conducted an initial assessment to understand its structure and content.
+-Data Cleaning: Addressed missing values, outliers, and standardized data formats for uniformity.
+-Univariate Exploration: Analyzed individual variables to understand their distribution and characteristics.
+-Bivariate Exploration: Explored relationships between two variables to uncover potential correlations or trends.
+-Multivariate Exploration: Delved into interactions among multiple variables to gain deeper insights and complex relationships.
+-Key Observations: After each exploration step, key observations were noted, setting the stage for further analysis and conclusions.
 
-```
-import pandas as pd
-
-# Load the CSV file into a DataFrame
-df = pd.read_csv('pisa2012.csv')
-
-```
-### Step 2: Data Formatting
-
-2.1. Examine the data for any formatting errors, such as inconsistent date formats or numeric representations. Identify columns that may contain incorrect data types.
-
-2.2. Correct formatting errors as needed. For example, you may convert date columns to the appropriate date format and ensure numeric columns have the correct data types.
-
-Step 3: Missing Values
-3.1. Identify columns that contain missing values (NaN or empty values).
-
-3.2. Remove rows with missing values using the dropna() method. Replace missing values with appropriate values if necessary.
-
-```
-# Remove rows with missing values
-df.dropna(inplace=True)
-```
-Step 4: Writing and Typing Errors
-4.1. Examine the data for writing and typing errors, such as typos or inconsistencies in categorical values.
-
-4.2. Correct any writing and typing errors in the dataset. This may involve standardizing category names, fixing typos, or reformatting text.
-
-Step 5: Save the Cleaned Data
-5.1. Save the cleaned DataFrame to a new CSV file to preserve the changes made during the data wrangling process.
-
-```
-# Save the cleaned DataFrame to a new CSV file
-df.to_csv('cleaned_pisa2012.csv', index=False)
-
-```
-Repository Contents
-'pisa2012.csv': The original CSV file containing the PISA 2012 data.
-'cleaned_pisa2012.csv': The cleaned CSV file with formatting errors, missing values, and writing/typing errors addressed.
-
-Follow the steps outlined above to wrangle the 'pisa2012' data file, and refer to the 'cleaned_pisa2012.csv' file for the cleaned dataset.
-
-For any questions or issues, please feel free to open an issue in this repository.
-```
-
-You should replace 'pisa2012.csv' with the actual file name if it's different, and make sure you save the cleaned data as 'cleaned_pisa2012.csv' or your preferred name. Additionally, ensure you have the necessary Python and pandas dependencies installed to perform the data wrangling steps.
+## Conclusion
+>
+The PISA 2012 data exploration provided a comprehensive view of the various factors influencing student performance. By understanding these dynamics, educators, policymakers, and stakeholders can implement effective strategies to enhance educational outcomes globally.
